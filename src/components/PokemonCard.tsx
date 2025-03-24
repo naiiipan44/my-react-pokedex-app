@@ -1,4 +1,13 @@
-function PokemonCard({ pokemon }) {
+interface Pokemon {
+	pokemon: {
+		name: string;
+		imgSrc?: string;
+	};
+}
+
+export type { Pokemon };
+
+function PokemonCard({ pokemon }: Readonly<Pokemon>) {
 	return (
 		<figure>
 			{pokemon.imgSrc ? (
